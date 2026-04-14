@@ -42,9 +42,14 @@ zread browse          → 查看你的 API 文档
 
 ### 使用方法
 
+首先进入你要生成文档的项目目录：
+
 ```bash
-# 一键运行完整工作流
-.\zread-generate.ps1 -src-dir ./your-project
+# 进入你的项目目录
+cd your-project
+
+# 一键运行完整工作流（指定源码目录）
+.\path\to\zread-generate.ps1 -src-dir ./src
 
 # 然后查看文档
 zread browse
