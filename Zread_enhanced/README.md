@@ -42,17 +42,29 @@ zread browse          → View your API documentation
 
 ### Usage
 
-First, go to the project directory where you want to generate docs:
+```powershell
+# 1. Go to your project directory
+cd D:\your\project\path
 
-```bash
-# Enter your project directory
-cd your-project
+# 2. Run the script (specify your source directory to scan)
+D:\CODE\CodebyPy\zread-generate.ps1 -srcDir ./src
 
-# Run the complete workflow (specify source directory)
-.\path\to\zread-generate.ps1 -src-dir ./src
-
-# Then view your docs
+# 3. View your docs
 zread browse
+```
+
+> **Note**: `zread-generate.ps1` is located at `D:\CODE\CodebyPy\zread-generate.ps1`. Adjust the path as needed.
+
+### Examples
+
+```powershell
+# Generate API docs for ORB_SLAM3 project
+cd D:\CODE\ORB_SLAM3_Fixed
+D:\CODE\CodebyPy\zread-generate.ps1 -srcDir ./src
+
+# Generate API docs for a Python project
+cd D:\CODE\my-python-project
+D:\CODE\CodebyPy\zread-generate.ps1 -srcDir ./src
 ```
 
 ### Manual Steps (alternative)
