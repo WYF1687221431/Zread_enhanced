@@ -42,17 +42,29 @@ zread browse          → 查看你的 API 文档
 
 ### 使用方法
 
-首先进入你要生成文档的项目目录：
+```powershell
+# 1. 进入你的项目目录（cd 到你的项目根目录）
+cd D:\你的项目路径
 
-```bash
-# 进入你的项目目录
-cd your-project
+# 2. 运行脚本（指定要扫描的源码目录）
+D:\CODE\CodebyPy\zread-generate.ps1 -srcDir ./src
 
-# 一键运行完整工作流（指定源码目录）
-.\path\to\zread-generate.ps1 -src-dir ./src
-
-# 然后查看文档
+# 3. 查看文档
 zread browse
+```
+
+> **注意**：`zread-generate.ps1` 脚本位置在 `D:\CODE\CodebyPy\zread-generate.ps1`，请根据实际情况修改路径。
+
+### 示例
+
+```powershell
+# 为 ORB_SLAM3 项目生成 API 文档
+cd D:\CODE\ORB_SLAM3_Fixed
+D:\CODE\CodebyPy\zread-generate.ps1 -srcDir ./src
+
+# 为 Python 项目生成 API 文档
+cd D:\CODE\my-python-project
+D:\CODE\CodebyPy\zread-generate.ps1 -srcDir ./src
 ```
 
 ### 手动分步执行（备选）
