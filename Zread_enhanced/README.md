@@ -42,9 +42,14 @@ zread browse          → View your API documentation
 
 ### Usage
 
+First, go to the project directory where you want to generate docs:
+
 ```bash
-# Run the complete workflow in one step
-.\zread-generate.ps1 -src-dir ./your-project
+# Enter your project directory
+cd your-project
+
+# Run the complete workflow (specify source directory)
+.\path\to\zread-generate.ps1 -src-dir ./src
 
 # Then view your docs
 zread browse
